@@ -1,3 +1,5 @@
 #Create topics
 docker exec content-kafka-deep-dive_kafka3_1 kafka-topics --bootstrap-server kafka1:19092 --create --topic quickstart --partitions 3 --replication-factor 1
 
+#Write message
+docker exec -it --tty content-kafka-deep-dive_kafka3_1 kafka-console-producer --broker-list kafka1:19092 --topic quickstart
